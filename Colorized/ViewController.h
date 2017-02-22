@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UIGestureRecognizerDelegate>
 
+@property (weak, nonatomic) IBOutlet UISlider *sliderColors;
+
+@property (strong, nonatomic) UITapGestureRecognizer *singleTap;
+
+- (IBAction)sliderValueChanged:(UISlider *)sender;
 
 @end
 

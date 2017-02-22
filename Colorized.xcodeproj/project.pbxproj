@@ -16,6 +16,7 @@
 		7DE82D2D1E4F8CB600415636 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DE82D2B1E4F8CB600415636 /* LaunchScreen.storyboard */; };
 		7DE82D381E4F8CB600415636 /* ColorizedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE82D371E4F8CB600415636 /* ColorizedTests.m */; };
 		7DE82D431E4F8CB600415636 /* ColorizedUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE82D421E4F8CB600415636 /* ColorizedUITests.m */; };
+		7DE82D581E4FA9F000415636 /* UIColor+HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE82D571E4FA9F000415636 /* UIColor+HexColor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		7DE82D3E1E4F8CB600415636 /* ColorizedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorizedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DE82D421E4F8CB600415636 /* ColorizedUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorizedUITests.m; sourceTree = "<group>"; };
 		7DE82D441E4F8CB600415636 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DE82D561E4FA9F000415636 /* UIColor+HexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexColor.h"; sourceTree = "<group>"; };
+		7DE82D571E4FA9F000415636 /* UIColor+HexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexColor.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,8 @@
 				7DE82D2B1E4F8CB600415636 /* LaunchScreen.storyboard */,
 				7DE82D2E1E4F8CB600415636 /* Info.plist */,
 				7DE82D261E4F8CB600415636 /* Colorized.xcdatamodeld */,
+				7DE82D561E4FA9F000415636 /* UIColor+HexColor.h */,
+				7DE82D571E4FA9F000415636 /* UIColor+HexColor.m */,
 				7DE82D1A1E4F8CB600415636 /* Supporting Files */,
 			);
 			path = Colorized;
@@ -281,6 +286,7 @@
 			files = (
 				7DE82D221E4F8CB600415636 /* ViewController.m in Sources */,
 				7DE82D281E4F8CB600415636 /* Colorized.xcdatamodeld in Sources */,
+				7DE82D581E4FA9F000415636 /* UIColor+HexColor.m in Sources */,
 				7DE82D1F1E4F8CB600415636 /* AppDelegate.m in Sources */,
 				7DE82D1C1E4F8CB600415636 /* main.m in Sources */,
 			);
