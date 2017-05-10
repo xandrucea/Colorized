@@ -8,7 +8,10 @@
 
 #import "AppDelegate.h"
 
-@interface AppDelegate ()
+#import "MenuViewController.h"
+#import "ViewController.h"
+
+@interface AppDelegate ()<SWRevealViewControllerDelegate>
 
 @end
 
@@ -17,6 +20,26 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+    
+//    ViewController *frontViewController = [[ViewController alloc] init];
+//    MenuViewController *menuViewController = [[MenuViewController alloc] init];
+//    
+//    UINavigationController *frontNavigationController = [[UINavigationController alloc] initWithRootViewController:frontViewController];
+//    UINavigationController *rearNavigationController = [[UINavigationController alloc] initWithRootViewController:menuViewController];
+//    
+//    SWRevealViewController *mainRevealController = [[SWRevealViewController alloc]
+//                                                    initWithRearViewController:rearNavigationController frontViewController:frontNavigationController];
+//    
+//    mainRevealController.delegate = self;
+//    
+//    self.viewController = mainRevealController;
+//    
+//    self.window.rootViewController = self.viewController;
+//    [self.window makeKeyAndVisible];
+
+    
     return YES;
 }
 

@@ -1,14 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Menu View Controller-->
+        <scene sceneID="LPs-4M-o12">
+            <objects>
+                <viewController storyboardIdentifier="MenuViewController" id="pqf-AE-T1X" customClass="MenuViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9e4-B1-eG6"/>
+                        <viewControllerLayoutGuide type="bottom" id="GVi-KN-Fk8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jjh-bL-lTk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0E9-la-RKj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iBT-mB-MhE">
+                                <rect key="frame" x="67" y="532" width="240" height="100"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="L7w-fx-vWa">
+                                        <rect key="frame" x="6" y="35" width="228" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="thumbTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </slider>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="wrA-hf-2YY"/>
+                                </constraints>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jiM-wa-r8s">
+                                <rect key="frame" x="28" y="141" width="143" height="221"/>
+                                <connections>
+                                    <segue destination="6Da-3K-M8j" kind="embed" identifier="colorsegue" id="uqO-4e-Qpd"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ja7-oD-gnd">
+                                <rect key="frame" x="196" y="115" width="153" height="198"/>
+                                <connections>
+                                    <segue destination="jf8-lA-prS" kind="embed" identifier="timingsegue" id="jHr-jT-Jrr"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GVi-KN-Fk8" firstAttribute="top" secondItem="0E9-la-RKj" secondAttribute="bottom" id="1CS-gN-Qx5"/>
+                            <constraint firstItem="ja7-oD-gnd" firstAttribute="top" secondItem="9e4-B1-eG6" secondAttribute="bottom" constant="95" id="69L-sE-1Tw"/>
+                            <constraint firstItem="0E9-la-RKj" firstAttribute="top" secondItem="Jjh-bL-lTk" secondAttribute="top" id="F0E-Ik-hbw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ja7-oD-gnd" secondAttribute="trailing" constant="10" id="H7B-I4-wij"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iBT-mB-MhE" secondAttribute="trailing" constant="52" id="Mci-Un-IdB"/>
+                            <constraint firstItem="iBT-mB-MhE" firstAttribute="leading" secondItem="Jjh-bL-lTk" secondAttribute="leadingMargin" constant="51" id="Se3-tl-q5X"/>
+                            <constraint firstItem="iBT-mB-MhE" firstAttribute="top" secondItem="jiM-wa-r8s" secondAttribute="bottom" constant="170" id="VhL-hn-FP0"/>
+                            <constraint firstItem="ja7-oD-gnd" firstAttribute="leading" secondItem="iBT-mB-MhE" secondAttribute="trailing" constant="-111" id="ctD-L4-xg8"/>
+                            <constraint firstItem="GVi-KN-Fk8" firstAttribute="top" secondItem="iBT-mB-MhE" secondAttribute="bottom" constant="35" id="j6e-vo-uY3"/>
+                            <constraint firstItem="jiM-wa-r8s" firstAttribute="leading" secondItem="Jjh-bL-lTk" secondAttribute="leadingMargin" constant="12" id="mSz-S6-GcM"/>
+                            <constraint firstItem="iBT-mB-MhE" firstAttribute="top" secondItem="ja7-oD-gnd" secondAttribute="bottom" constant="219" id="q3f-pV-fvf"/>
+                            <constraint firstItem="iBT-mB-MhE" firstAttribute="centerY" secondItem="Jjh-bL-lTk" secondAttribute="centerY" constant="248.5" id="rPn-7o-aid"/>
+                            <constraint firstAttribute="trailing" secondItem="0E9-la-RKj" secondAttribute="trailing" id="trA-DL-9GI"/>
+                            <constraint firstItem="jiM-wa-r8s" firstAttribute="top" secondItem="9e4-B1-eG6" secondAttribute="bottom" constant="121" id="vJB-mr-SZi"/>
+                            <constraint firstItem="0E9-la-RKj" firstAttribute="leading" secondItem="Jjh-bL-lTk" secondAttribute="leading" id="x9O-bd-Nwb"/>
+                            <constraint firstItem="ja7-oD-gnd" firstAttribute="leading" secondItem="jiM-wa-r8s" secondAttribute="trailing" constant="25" id="yfu-Wy-AYk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="viewAlpha" destination="0E9-la-RKj" id="r8z-Xm-cl8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0PX-Ff-9bh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="-627.4362818590705"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -38,6 +110,72 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="96.7016491754123"/>
+        </scene>
+        <!--Timing Container View-->
+        <scene sceneID="LNR-0f-DKx">
+            <objects>
+                <viewController storyboardIdentifier="timingcontainer" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jf8-lA-prS" customClass="TimingContainerView" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FZU-zh-cgZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="f9L-Ej-eYS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qug-U3-ene">
+                        <rect key="frame" x="0.0" y="0.0" width="153" height="198"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1.5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="xuc-5h-FpS">
+                                <rect key="frame" x="-12" y="84" width="176" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="minimumTrackTintColor" red="0.99585087439999997" green="0.21658792230000001" blue="0.081937580630000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="maximumTrackTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="thumbTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="jf8-lA-prS" eventType="valueChanged" id="cQJ-1z-gmp"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="slider" destination="xuc-5h-FpS" id="n7N-bD-Lhh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IbH-8T-G1a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="700" y="-552"/>
+        </scene>
+        <!--Color Container View-->
+        <scene sceneID="cY1-1y-lic">
+            <objects>
+                <viewController storyboardIdentifier="colorcontainer" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6Da-3K-M8j" customClass="ColorContainerView" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dnt-fx-JvX"/>
+                        <viewControllerLayoutGuide type="bottom" id="Z13-w8-3jW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OKZ-n0-FMR">
+                        <rect key="frame" x="0.0" y="0.0" width="143" height="221"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="9" translatesAutoresizingMaskIntoConstraints="NO" id="9Od-5r-gPe">
+                                <rect key="frame" x="-32" y="95" width="206" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="minimumTrackTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="maximumTrackTintColor" red="1" green="0.21749031699999999" blue="0.0822789664" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="thumbTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="6Da-3K-M8j" eventType="valueChanged" id="r0g-aI-SK0"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="slider" destination="9Od-5r-gPe" id="IN4-Ex-mMH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QaW-YM-1LG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="692" y="-947"/>
         </scene>
     </scenes>
 </document>
