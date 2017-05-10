@@ -36,6 +36,7 @@
     
     if( [self.myDelegate respondsToSelector:@selector(sliderFeedbackColor:)] ){
         [self.myDelegate sliderFeedbackColor:(int)sender.value];
+        self.view.layer.cornerRadius = 20.0f + (13 * (int)sender.value);
     }
 }
 

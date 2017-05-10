@@ -14,7 +14,7 @@
 
 @property (strong, nonatomic) ColorContainerView *colorContainer;
 @property (strong, nonatomic) TimingContainerView *timingContainer;
-
+@property (strong, nonatomic) EffectContainerView *effetContainer;
 
 @end
 
@@ -49,6 +49,11 @@
         self.timingContainer = (TimingContainerView *) [segue destinationViewController];
         self.timingContainer.myDelegate = (id)self;
     }
+    
+    if( [segueName isEqualToString:@"effectsegue"] ){
+        self.effetContainer = (EffectContainerView *) [segue destinationViewController];
+        self.effetContainer.myDelegate = (id)self;
+    }
 }
 
 
@@ -62,6 +67,10 @@
 
 - (void)sliderFeedbackTiming:(int)timing{
     NSLog(@"Timinig: %d", timing);
+}
+
+- (void)sliderFeedbackEffect:(EffectStateType)effectType{
+    NSLog(@"EffectType: %ld", (long)effectType);
 }
 
     /***************************************

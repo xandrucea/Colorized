@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7D09FC3C1EC282B8001B617A /* ColorContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D09FC3B1EC282B8001B617A /* ColorContainerView.m */; };
 		7D09FC3F1EC28DD3001B617A /* TimingContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D09FC3E1EC28DD3001B617A /* TimingContainerView.m */; };
+		7D09FC421EC38323001B617A /* EffectContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D09FC411EC38323001B617A /* EffectContainerView.m */; };
+		7D09FC461EC3BDC7001B617A /* ColorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D09FC451EC3BDC7001B617A /* ColorHandler.m */; };
 		7DDF81361EBFE22F00A9CE8F /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DDF81351EBFE22F00A9CE8F /* MenuViewController.m */; };
 		7DE82D1C1E4F8CB600415636 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE82D1B1E4F8CB600415636 /* main.m */; };
 		7DE82D1F1E4F8CB600415636 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE82D1E1E4F8CB600415636 /* AppDelegate.m */; };
@@ -46,6 +48,10 @@
 		7D09FC3B1EC282B8001B617A /* ColorContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ColorContainerView.m; path = Menu/ContainerViews/ColorContainerView.m; sourceTree = "<group>"; };
 		7D09FC3D1EC28DD3001B617A /* TimingContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimingContainerView.h; path = Menu/ContainerViews/TimingContainerView.h; sourceTree = "<group>"; };
 		7D09FC3E1EC28DD3001B617A /* TimingContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimingContainerView.m; path = Menu/ContainerViews/TimingContainerView.m; sourceTree = "<group>"; };
+		7D09FC401EC38323001B617A /* EffectContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EffectContainerView.h; path = Menu/ContainerViews/EffectContainerView.h; sourceTree = "<group>"; };
+		7D09FC411EC38323001B617A /* EffectContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EffectContainerView.m; path = Menu/ContainerViews/EffectContainerView.m; sourceTree = "<group>"; };
+		7D09FC441EC3BDC7001B617A /* ColorHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ColorHandler.h; path = Objects/ColorHandler.h; sourceTree = "<group>"; };
+		7D09FC451EC3BDC7001B617A /* ColorHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ColorHandler.m; path = Objects/ColorHandler.m; sourceTree = "<group>"; };
 		7D44BE27F179A50C491ED097 /* Pods-Colorized.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Colorized.release.xcconfig"; path = "Pods/Target Support Files/Pods-Colorized/Pods-Colorized.release.xcconfig"; sourceTree = "<group>"; };
 		7DDF81341EBFE22F00A9CE8F /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		7DDF81351EBFE22F00A9CE8F /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
@@ -123,8 +129,19 @@
 				7D09FC3B1EC282B8001B617A /* ColorContainerView.m */,
 				7D09FC3D1EC28DD3001B617A /* TimingContainerView.h */,
 				7D09FC3E1EC28DD3001B617A /* TimingContainerView.m */,
+				7D09FC401EC38323001B617A /* EffectContainerView.h */,
+				7D09FC411EC38323001B617A /* EffectContainerView.m */,
 			);
 			name = ContainerViews;
+			sourceTree = "<group>";
+		};
+		7D09FC431EC3BD71001B617A /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				7D09FC441EC3BDC7001B617A /* ColorHandler.h */,
+				7D09FC451EC3BDC7001B617A /* ColorHandler.m */,
+			);
+			name = Objects;
 			sourceTree = "<group>";
 		};
 		7DE82D0E1E4F8CB500415636 = {
@@ -157,6 +174,7 @@
 				7DE82D201E4F8CB600415636 /* ViewController.h */,
 				7DE82D211E4F8CB600415636 /* ViewController.m */,
 				7D09FC371EC2820B001B617A /* Menu */,
+				7D09FC431EC3BD71001B617A /* Objects */,
 				7D09FC381EC2821F001B617A /* Category */,
 				7DE82D1A1E4F8CB600415636 /* Supporting Files */,
 				7DE82D291E4F8CB600415636 /* Assets.xcassets */,
@@ -398,7 +416,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D09FC461EC3BDC7001B617A /* ColorHandler.m in Sources */,
 				7DE82D221E4F8CB600415636 /* ViewController.m in Sources */,
+				7D09FC421EC38323001B617A /* EffectContainerView.m in Sources */,
 				7DDF81361EBFE22F00A9CE8F /* MenuViewController.m in Sources */,
 				7DE82D281E4F8CB600415636 /* Colorized.xcdatamodeld in Sources */,
 				7DE82D581E4FA9F000415636 /* UIColor+HexColor.m in Sources */,

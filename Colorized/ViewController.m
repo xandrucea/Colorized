@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 #import "MenuViewController.h"
+#import "ColorHandler.h"
 
 #import "UIColor+HexColor.h"
 
@@ -46,24 +47,7 @@
 
 
 - (void)createNumberOfColorsForArray{
- 
-    _arrayColors = [[NSMutableArray alloc] init];
-    for ( int i = 0; i < 7; i++ ){
-//        UIColor *newColor = [UIColor colorWithRed:( arc4random() % 10 * i / 256.0 ) + 0.5
-//                                            green:( arc4random() % 20 * i / 256.0 ) + 0.5
-//                                             blue:( arc4random() % 15 * i / 256.0 ) + 0.5
-//                                            alpha:1];
-        
-        CGFloat hue = ( arc4random() % 256 / 256.0 );  //  0.0 to 1.0
-        CGFloat saturation = ( arc4random() % 128 / 256.0 ) + 0.5;  //  0.5 to 1.0, away from white
-        CGFloat brightness = ( arc4random() % 128 / 256.0 ) + 0.5;  //  0.5 to 1.0, away from black
-        UIColor *newColor = [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:1];
-        [_arrayColors addObject:newColor];
-    }
-    
-    [_arrayColors addObject:[UIColor redColor]];
-    [_arrayColors addObject:[UIColor blueColor]];
-    
+    _arrayColors = [ColorHandler getArrayWithColors];
     self.view.backgroundColor = _arrayColors[(int)self.sliderColors.value];
 }
 
