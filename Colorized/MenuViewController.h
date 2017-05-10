@@ -10,11 +10,12 @@
 #import "TimingContainerView.h"
 #import "ColorContainerView.h"
 #import "EffectContainerView.h"
+#import "ViewController.h"
 
 @interface MenuViewController : UIViewController
 <TimingContainerDelegate, ColorContainerDelegate, EffectContainerDelegate>
 
-@property ( strong, nonatomic ) UIViewController *parentVC;
+@property ( strong, nonatomic ) ViewController *parentVC;
 
 
 @end

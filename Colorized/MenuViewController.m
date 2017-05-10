@@ -90,4 +90,13 @@
                      }];
 }
 
+
+- (IBAction)buttonExit:(id)sender {
+    exit(0);
+}
+
+- (IBAction)buttonNewColorset:(id)sender {
+    [self.parentVC createNumberOfColorsForArray];
+}
+
 @end

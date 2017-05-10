@@ -10,11 +10,9 @@
 
 @interface ViewController : UIViewController <UIGestureRecognizerDelegate>
 
-@property (weak, nonatomic) IBOutlet UISlider *sliderColors;
-@property (strong, nonatomic) UITapGestureRecognizer *singleTap;
 @property (strong, nonatomic) UITapGestureRecognizer *menuTap;
 
-- (IBAction)sliderValueChanged:(UISlider *)sender;
+- (void)createNumberOfColorsForArray;
 
 @end
 

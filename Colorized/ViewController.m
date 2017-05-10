@@ -30,7 +30,6 @@
     
     _arrayColors = [[NSMutableArray alloc] init];
     
-
     [self createNumberOfColorsForArray];
     [self initializeGestures];
     
@@ -48,7 +47,7 @@
 
 - (void)createNumberOfColorsForArray{
     _arrayColors = [ColorHandler getArrayWithColors];
-    self.view.backgroundColor = _arrayColors[(int)self.sliderColors.value];
+    self.view.backgroundColor = _arrayColors[0];
 }
 
 - (void)displayMenu{
@@ -66,13 +65,6 @@
 
 - (void)initializeGestures{
     
-    // add gesture for color array change
-    self.singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                             action:@selector(createNumberOfColorsForArray)];
-    self.singleTap.numberOfTapsRequired = 2;
-    self.singleTap.delegate = (id)self;
-    [self.view addGestureRecognizer:self.singleTap];
-    
     // add gesture for menu
     self.menuTap = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                            action:@selector(displayMenu)];
@@ -80,12 +72,6 @@
     self.menuTap.numberOfTapsRequired = 4;
     self.menuTap.delegate = (id)self;
     [self.view addGestureRecognizer:self.menuTap];
-}
-
-- (IBAction)sliderValueChanged:(UISlider *)sender{
-    NSLog(@"Color selected %d", (int)sender.value);
-    UIColor *nextColor = _arrayColors[(int)sender.value];
-    self.view.backgroundColor = nextColor;
 }
 
 @end
