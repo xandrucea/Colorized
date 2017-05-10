@@ -13,9 +13,10 @@
 #import "ViewController.h"
 
 @interface MenuViewController : UIViewController
-<TimingContainerDelegate, ColorContainerDelegate, EffectContainerDelegate>
+<TimingContainerDelegate, ColorContainerDelegate, EffectContainerDelegate, UIGestureRecognizerDelegate>
 
 @property ( strong, nonatomic ) ViewController *parentVC;
+@property ( strong, nonatomic ) UITapGestureRecognizer *tapExitMenu;
 
 
 @end

@@ -22,7 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self initializeMenu];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -61,6 +61,14 @@
  *          MY DELEGATES               *
  ***************************************/
 
+- (void)initializeMenu{
+    _tapExitMenu = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                           action:@selector(dismissMenu)];
+    _tapExitMenu.numberOfTapsRequired = 2;
+    _tapExitMenu.delegate = (id)self;
+    [self.view addGestureRecognizer:_tapExitMenu];
+}
+
 - (void)sliderFeedbackColor:(int)colorValue{
     NSLog(@"Color: %d", colorValue);
 }
@@ -71,6 +79,10 @@
 
 - (void)sliderFeedbackEffect:(EffectStateType)effectType{
     NSLog(@"EffectType: %ld", (long)effectType);
+}
+
+- (void)dismissMenu{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
     /***************************************
